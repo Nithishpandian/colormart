@@ -14,7 +14,7 @@ const Footer = () => {
       viewport={{
         once: true,
       }}
-      className=" border-t border-t-stone-200 bg-dark-blue py-4 px-4 sm:px-10 md:px-14 lg:px-20 xl:px-24 flex flex-col sm:flex-row sm:items-center justify-between"
+      className=" border-t border-t-stone-200 bg-dark-blue py-4 px-4 sm:px-10 md:px-14 lg:px-20 xl:px-24 flex flex-col sm:flex-row items-center justify-between"
     >
       <p className=" text-stone-300 font-noto-sans text-sm sm:text-base">
         © Copyright 2023. Designed by Soundar Rajan

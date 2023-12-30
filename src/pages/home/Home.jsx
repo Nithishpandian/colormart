@@ -35,7 +35,7 @@ const Home = () => {
           <Footer />
         </div>
       </div>
-      <div className=" fixed bottom-5 right-5">
+      <div className=" fixed bottom-14 right-10">
         <a href="#header" className={`${isIntersecting ? "flex" : "hidden"}`}>
           <button className=" bg-dark-blue text-white hover:bg-primary-blue duration-300 rounded-full p-3 cursor-pointer">
             <FaArrowUp className=" text-xl" />

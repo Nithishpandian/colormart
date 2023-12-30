@@ -30,7 +30,7 @@ const Contact = () => {
         viewport={{
           once: true,
         }}
-        className=" flex flex-col gap-6 lg:gap-12 pr-5 lg:pr-12 pb-1"
+        className=" flex flex-col gap-6 lg:gap-12 pt-5 pr-5 lg:pr-12 pb-1"
       >
         <div className=" flex flex-col gap-1 lg:gap-2">
           <h1 className=" font-extrabold text-3xl sm:text-4xl font-noto-sans text-dark-blue">
@@ -54,9 +54,6 @@ const Contact = () => {
               <p>support@colormartsoftware.com</p>
             </p>
           </div>
-        </div>
-        <div className=" h-full w-full flex justify-start items-start">
-          <div className=" h-fit py-1.5 sm:py-2 px-10 sm:px-14 bg-dark-blue rounded-sm"></div>
         </div>
       </motion.div>
       <motion.form

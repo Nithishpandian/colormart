@@ -14,11 +14,11 @@ const WhereCanWeHelpCard = ({ heading, content, image, screenshot }) => {
   };
 
   return (
-    <div className="group duration-300 grid grid-rows-[300px_250px] flex-col items-center justify-center rounded-md shadow-md w-96">
+    <div className="group duration-300 grid grid-rows-[300px_250px] flex-col items-center justify-center rounded-md shadow-md max-[400px]:w-80 w-96">
       <div className=" flex justify-center items-center py-3 px-3 bg-[#a3a3a3] group-hover:bg-white duration-300 w-full h-full rounded-t-md overflow-hidden cursor-pointer">
-        <img className=" object-cover" src={image} alt="" />
+        <img className=" group-hover:scale-125 duration-300 object-cover" src={image} alt="" />
       </div>
-      <div className=" group-hover:bg-indigo duration-300 flex flex-col gap-3 pt-6 pb-8 px-2 sm:px-3 md:px-5 xl:px-6 rounded-b-md">
+      <div className=" group-hover:bg-indigo duration-300 flex flex-col items-center justify-center text-center gap-3 pt-6 pb-8 px-2 sm:px-3 md:px-5 xl:px-6 rounded-b-md">
         <h1 className=" font-semibold text-2xl text-indigo group-hover:text-white duration-300">
           {heading}
         </h1>
