@@ -40,11 +40,11 @@ const Contact = () => {
             Protect your awesome family
           </p>
         </div>
-        <div className=" flex flex-col gap-1 lg:gap-2">
+        <div className=" flex flex-col gap-2 lg:gap-2">
           <h1 className=" font-bold font-noto-sans text-3xl text-dark-blue">
             Talk to an expert
           </h1>
-          <div className=" flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 md:gap-2 lg:gap-4">
+          <div className=" flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
             <p className=" flex items-center gap-2 md:gap-1 lg:gap-2 text-stone-500 text-sm xl:text-base">
               <MdOutlinePhoneInTalk className=" text-dark-blue text-xl" />
               <p>098 76 54 321</p>

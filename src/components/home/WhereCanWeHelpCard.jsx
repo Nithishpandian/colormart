@@ -46,7 +46,7 @@ const WhereCanWeHelpCard = ({ heading, content, image, screenshot }) => {
                     <h1 className=" font-semibold text-2xl lg:text-3xl text-indigo group-hover:text-white duration-300">
                       {heading}
                     </h1>
-                    <p className=" group-hover:text-stone-200 duration-300 text-stone-500 text-sm lg:text-base">
+                    <p className=" text-justify group-hover:text-stone-200 duration-300 text-stone-500 text-sm lg:text-base">
                       {content}
                     </p>
                     <div className="my-8">

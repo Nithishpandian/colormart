@@ -57,7 +57,6 @@ const WhereCanWeHelp = () => {
               once: true,
             }}
             custom={index}
-            className={` ${index === 4 && "mr-8"} `}
           >
             <WhereCanWeHelpCard
               key={item}

@@ -28,12 +28,12 @@ const WhoWeAre = () => {
         viewport={{
           once: true,
         }}
-        className=" flex flex-col items-center gap-2 lg:gap-3 xl:gap-6 md:py-10 px-2 sm:px-20 md:px-2 order-1 md:order-2"
+        className=" flex flex-col justify-center items-center gap-2 lg:gap-3 xl:gap-6 md:py-10 px-2 sm:px-20 md:px-2 order-1 md:order-2"
       >
-        <h1 className=" text-dark-blue text-3xl md:text-4xl xl:text-5xl font-bold font-noto-sans">
+        <h1 className=" text-dark-blue text-4xl md:text-4xl xl:text-5xl font-bold font-noto-sans mb-2">
           Who we are ?
         </h1>
-        <p className=" text-[#142752cc] text-center text-sm sm:text-base lg:text-lg xl:leading-8 md:pl-1 lg:pl-2 md:pr-2 lg:pr-4 font-roboto">
+        <p className=" text-justify text-[#142752cc] text-sm sm:text-base lg:text-lg xl:leading-8 md:pl-1 lg:pl-2 md:pr-2 lg:pr-4 font-roboto">
           For nearly 20 years now Colourmart has been working with Color
           Solutions International (CSI) to deliver to CSI's customers the world
           class online systems they need to manage their supply chain color
