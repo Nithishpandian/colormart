@@ -28,12 +28,12 @@ const Home = () => {
         <Header />
         <HeroSection />
         <div ref={ref}>
-        <WhoWeAre />
+          <WhoWeAre />
+          <WhereCanWeHelp />
+          <LastThing />
+          <Contact />
+          <Footer />
         </div>
-        <WhereCanWeHelp />
-        <LastThing />
-        <Contact />
-        <Footer />
       </div>
       <div className=" fixed bottom-5 right-5">
         <a href="#header" className={`${isIntersecting ? "flex" : "hidden"}`}>
