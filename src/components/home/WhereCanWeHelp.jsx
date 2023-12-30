@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import WhereCanWeHelpCard from "./WhereCanWeHelpCard";
 import { motion } from "framer-motion";
 import {
@@ -9,6 +9,19 @@ import { WhereCanWeHelpData } from "../../data/whereCanWeHelpData";
 import Marquee from "react-fast-marquee";
 
 const WhereCanWeHelp = () => {
+  const [screenWidth, setScreenWidth] = useState();
+  const screenWidthFunc = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", screenWidthFunc);
+    return () => {
+      window.removeEventListener("resize", screenWidthFunc);
+    };
+  }, []);
+
   return (
     <div className=" my-4 sm:my-6 md:my-10 lg:my-12 xl:my-20 2xl:my-24 px-3 md:px-4 lg:px-16 xl:px-32 py-10 md:py-6">
       <motion.div
@@ -30,9 +43,38 @@ const WhereCanWeHelp = () => {
           built so far tend to include one or more of the following modules...
         </p>
       </motion.div>
-      <Marquee pauseOnHover={true}>
+      {screenWidth > 768 ? (
+        <Marquee className="" pauseOnHover={true}>
+          <div
+            className=" flex flex-col md:flex-row justify-center md:justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
+            id="card"
+          >
+            {WhereCanWeHelpData.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={animationVariantCards}
+                initial="initial"
+                whileInView={"animate"}
+                viewport={{
+                  once: true,
+                }}
+                custom={index}
+                className={` ${index === 4 && "mr-8"} `}
+              >
+                <WhereCanWeHelpCard
+                  key={item}
+                  heading={item.heading}
+                  content={item.content}
+                  image={item.image}
+                  screenshot={item.screenshot}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </Marquee>
+      ) : (
         <div
-          className=" flex flex-col md:flex-row justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
+          className=" flex flex-col md:flex-row justify-center md:justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
           id="card"
         >
           {WhereCanWeHelpData.map((item, index) => (
@@ -45,7 +87,7 @@ const WhereCanWeHelp = () => {
                 once: true,
               }}
               custom={index}
-              className={` ${index===4 && "mr-8"} `}
+              className={` ${index === 4 && "mr-8"} `}
             >
               <WhereCanWeHelpCard
                 key={item}
@@ -57,7 +99,7 @@ const WhereCanWeHelp = () => {
             </motion.div>
           ))}
         </div>
-      </Marquee>
+      )}
     </div>
   );
 };
