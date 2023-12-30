@@ -29,7 +29,7 @@ const WhereCanWeHelp = () => {
           built so far tend to include one or more of the following modules...
         </p>
       </motion.div>
-      <div className=" flex justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 overflow-x-auto overflow-y-hidden">
+      <div className=" flex justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 overflow-x-auto overflow-y-hidden" id="card">
         {card.map((card, index) => (
           <motion.div
             key={index}
