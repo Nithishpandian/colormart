@@ -43,63 +43,32 @@ const WhereCanWeHelp = () => {
           built so far tend to include one or more of the following modules...
         </p>
       </motion.div>
-      {screenWidth > 768 ? (
-        <Marquee className="" pauseOnHover={true}>
-          <div
-            className=" flex flex-col md:flex-row justify-center md:justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
-            id="card"
+      <div
+        className=" flex flex-col md:flex-row justify-center md:justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
+        id="card"
+      >
+        {WhereCanWeHelpData.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={animationVariantCards}
+            initial="initial"
+            whileInView={"animate"}
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+            className={` ${index === 4 && "mr-8"} `}
           >
-            {WhereCanWeHelpData.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={animationVariantCards}
-                initial="initial"
-                whileInView={"animate"}
-                viewport={{
-                  once: true,
-                }}
-                custom={index}
-                className={` ${index === 4 && "mr-8"} `}
-              >
-                <WhereCanWeHelpCard
-                  key={item}
-                  heading={item.heading}
-                  content={item.content}
-                  image={item.image}
-                  screenshot={item.screenshot}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </Marquee>
-      ) : (
-        <div
-          className=" flex flex-col md:flex-row justify-center md:justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 md:overflow-x-auto overflow-y-hidden"
-          id="card"
-        >
-          {WhereCanWeHelpData.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={animationVariantCards}
-              initial="initial"
-              whileInView={"animate"}
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-              className={` ${index === 4 && "mr-8"} `}
-            >
-              <WhereCanWeHelpCard
-                key={item}
-                heading={item.heading}
-                content={item.content}
-                image={item.image}
-                screenshot={item.screenshot}
-              />
-            </motion.div>
-          ))}
-        </div>
-      )}
+            <WhereCanWeHelpCard
+              key={item}
+              heading={item.heading}
+              content={item.content}
+              image={item.image}
+              screenshot={item.screenshot}
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

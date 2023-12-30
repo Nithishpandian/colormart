@@ -28,7 +28,7 @@ const WhoWeAre = () => {
         viewport={{
           once: true,
         }}
-        className=" flex flex-col items-center gap-2 lg:gap-3 xl:gap-6 md:py-10 px-2 sm:px-20 md:px-2"
+        className=" flex flex-col items-center gap-2 lg:gap-3 xl:gap-6 md:py-10 px-2 sm:px-20 md:px-2 order-1 md:order-2"
       >
         <h1 className=" text-dark-blue text-3xl md:text-4xl xl:text-5xl font-bold font-noto-sans">
           Who we are ?
