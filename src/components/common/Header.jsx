@@ -6,6 +6,7 @@ import { animationVariantHeader } from "./animations/CommonAnimations";
 const Header = () => {
   return (
     <motion.div
+      id="header"
       variants={animationVariantHeader}
       initial="initial"
       animate="animate"
