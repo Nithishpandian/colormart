@@ -5,9 +5,9 @@ import {
   animationVariantCards,
   animationvariantWhereCanWeHelp,
 } from "./animations/homeAnimations";
+import { WhereCanWeHelpData } from "../../data/whereCanWeHelpData";
 
 const WhereCanWeHelp = () => {
-  const [card, setCard] = useState([1, 2, 3, 4, 5]);
   return (
     <div className=" my-4 sm:my-6 md:my-10 lg:my-12 xl:my-20 2xl:my-24 px-3 md:px-4 lg:px-16 xl:px-32 py-10 md:py-6">
       <motion.div
@@ -30,7 +30,7 @@ const WhereCanWeHelp = () => {
         </p>
       </motion.div>
       <div className=" flex justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 overflow-x-auto overflow-y-hidden" id="card">
-        {card.map((card, index) => (
+        {WhereCanWeHelpData.map((item, index) => (
           <motion.div
             key={index}
             variants={animationVariantCards}
@@ -41,7 +41,13 @@ const WhereCanWeHelp = () => {
             }}
             custom={index}
           >
-            <WhereCanWeHelpCard key={card} />
+            <WhereCanWeHelpCard 
+              key={item} 
+              heading={item.heading}
+              content={item.content}
+              image={item.image}
+              screenshot={item.screenshot}
+            />
           </motion.div>
         ))}
       </div>

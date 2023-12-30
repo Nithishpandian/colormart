@@ -1,14 +1,15 @@
 import React from "react";
-import whoWeAre from "../../assets/images/home/who_we_are.png";
+// import whoWeAre from "../../assets/images/home/who_we_are.png";
 import { motion } from "framer-motion";
 import {
   animationVariantWhoWeAre1,
   animationVariantWhoWeAre2,
 } from "./animations/homeAnimations";
+import whoWeAre from "../../assets/images/home/whoWeAre.jpg"
 
 const WhoWeAre = () => {
   return (
-    <div className=" flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-8 2xl:gap-16 px-3 md:px-4 lg:px-16 xl:px-24 py-10 md:py-6" id="who-we-are">
+    <div className=" flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 lg:gap-8 2xl:gap-16 px-3 md:px-4 lg:px-16 xl:px-24 py-10 md:py-6" id="who-we-are">
       <motion.img
         variants={animationVariantWhoWeAre1}
         initial="initial"
@@ -16,7 +17,7 @@ const WhoWeAre = () => {
         viewport={{
           once: true,
         }}
-        className=" md:w-[80%] lg:w-full"
+        className=" w-[400px] rounded-md"
         src={whoWeAre}
         alt=""
       />
