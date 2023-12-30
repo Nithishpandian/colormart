@@ -7,7 +7,7 @@ import {
 } from "./animations/homeAnimations";
 
 const WhereCanWeHelp = () => {
-  const [card, setCard] = useState([1, 2, 3, 4]);
+  const [card, setCard] = useState([1, 2, 3, 4, 5]);
   return (
     <div className=" my-4 sm:my-6 md:my-10 lg:my-12 xl:my-20 2xl:my-24 px-3 md:px-4 lg:px-16 xl:px-32 py-10 md:py-6">
       <motion.div
@@ -29,7 +29,7 @@ const WhereCanWeHelp = () => {
           built so far tend to include one or more of the following modules...
         </p>
       </motion.div>
-      <div className=" grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-center items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 ">
+      <div className=" flex justify-start items-center gap-8 sm:gap-5 md:gap-8 lg:gap-8 my-10 px-4 sm:px-0 md:px-16 lg:px-0 overflow-x-auto overflow-y-hidden">
         {card.map((card, index) => (
           <motion.div
             key={index}

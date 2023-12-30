@@ -3,7 +3,7 @@ import serviceIcon from "../../assets/images/home/service_icon.png";
 
 const WhereCanWeHelpCard = () => {
   return (
-    <div className="group duration-300 flex flex-col items-center justify-center rounded-md shadow-md w-80 sm:w-auto">
+    <div className="group duration-300 flex flex-col items-center justify-center rounded-md shadow-md w-96">
       <div className=" flex justify-center py-16 px-16 bg-[#8b8b8b] group-hover:bg-white duration-300 w-full rounded-t-md overflow-hidden cursor-pointer">
         <img
           className=" w-[70%]"
