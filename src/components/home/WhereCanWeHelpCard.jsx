@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
 
-const WhereCanWeHelpCard = ({ heading, content, image, screenshot }) => {
+const WhereCanWeHelpCard = ({ index, heading, content, image, screenshot }) => {
   const [isShown, setIsShown] = useState(false);
 
   const handleClickOpen = () => {
@@ -14,7 +14,7 @@ const WhereCanWeHelpCard = ({ heading, content, image, screenshot }) => {
   };
 
   return (
-    <div className="group duration-300 grid grid-rows-2 md:grid-rows-[300px_250px] flex-col items-center justify-center rounded-md shadow-md max-[400px]:w-80 w-96">
+    <div className="group duration-300 grid grid-rows-2 md:grid-rows-[300px_250px] flex-col items-center justify-center rounded-md shadow-md max-[400px]:w-80 w-[350px]">
       <div className=" flex justify-center items-center py-3 px-3 bg-[#a3a3a3] group-hover:bg-white duration-300 w-full h-full rounded-t-md overflow-hidden cursor-pointer">
         <img className=" scale-110 group-hover:scale-125 md:scale-150 md:group-hover:scale-125 duration-300 object-cover" src={image} alt="" />
       </div>
@@ -23,7 +23,7 @@ const WhereCanWeHelpCard = ({ heading, content, image, screenshot }) => {
           {heading}
         </h1>
         <p className=" group-hover:text-stone-200 duration-300 text-stone-500 text-sm sm:text-base">
-          {content.slice(0, 160)}...
+          {index===2 ? content.slice(0, 120)  : content.slice(0, 150)}...
         </p>
         <div>
           <button

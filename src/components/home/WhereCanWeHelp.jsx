@@ -59,7 +59,8 @@ const WhereCanWeHelp = () => {
             custom={index}
           >
             <WhereCanWeHelpCard
-              key={item}
+              key={index}
+              index={index}
               heading={item.heading}
               content={item.content}
               image={item.image}
